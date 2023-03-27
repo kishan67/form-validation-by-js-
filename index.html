@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header class="signup">
+          <h1>Signup</h1>
+        </header>
+        <!-- form  ("use id same as to keep focus , so if we click on full name also if will take us in textbox ") -->
+        <main class="signup-body">
+          <form action="#">
+            <p>
+                <!--use "required"  attributed to alert users to fill form in requested format  -->
+              <label for="name">Full Name</label>
+              <input type="text" placeholder="Type Name Here" id="name" required />
+              <span id="nameError"></span>
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" placeholder="xyz@gmail.com" id="email" required />
+              </p>
+              <p>
+                <label for="Password"> Password</label>
+                <input type="password" placeholder="At least 8 character" id="Password" required min="8" max="30" />
+              </p>
+              <p>
+                <input type="submit" value="Create Account" id="submitBtn">
+
+              </p>
+          </form>
+        </main>
+        <footer class="signup-footer">
+            <p>
+                Already have an account <a href="#" >Login</a>
+            </p>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
